@@ -1,9 +1,9 @@
 def substrings(words, dictionnary)
     hash = Hash.new(0)
-    wordsArray = words.split(" ")
+    wordsArray = words.downcase.split(" ")
     dictionnary.each() do |dictionnaryElement|
         wordsArray.each do |word|
-            if(word.downcase.include?(dictionnaryElement.downcase))
+            if(word.include?(dictionnaryElement))
                 hash[dictionnaryElement] +=1;
             end
         end
